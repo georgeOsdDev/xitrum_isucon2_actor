@@ -1,0 +1,12 @@
+- import scala.collection.mutable.ArrayBuffer
+- import isucon2._
+
+- val artists = at("artists").asInstanceOf[List[Map[String,String]]]
+
+h1 TOP
+
+ul
+  - for (artist <- artists)
+    li
+      a(href={url[ArtistShow]("artistid" -> artist.get("id"))})
+        span.artist_name= artist.get("name")

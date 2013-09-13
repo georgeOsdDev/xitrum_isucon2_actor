@@ -1,0 +1,7 @@
+ul
+  li
+    a(href="/admin/order")="注文CSV"
+  li
+    form(method="POST")
+      != antiCsrfInput
+      input(type="submit" value="データ初期化")
